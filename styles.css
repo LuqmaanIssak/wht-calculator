@@ -7,6 +7,9 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
+    /* Prevent viewport zooming on iOS */
+    -webkit-text-size-adjust: 100%; /* Prevents text size adjustment */
+    -ms-text-size-adjust: 100%;
 }
 
 .calculator {
@@ -36,7 +39,7 @@ h1 {
 .input-group input {
     width: 100%;
     padding: 10px;
-    font-size: 1em;
+    font-size: 16px; /* Ensure font size is set to prevent zooming */
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -62,7 +65,7 @@ input[type=number] {
 .buttons button {
     width: 48%;
     padding: 10px;
-    font-size: 1em;
+    font-size: 16px; /* Ensure font size is consistent */
     background-color: #007BFF;
     color: white;
     border: none;
@@ -95,11 +98,11 @@ input[type=number] {
     }
 
     .input-group input {
-        font-size: 0.9em;
+        font-size: 14px; /* Adjust font size for smaller screens */
     }
 
     .buttons button {
-        font-size: 0.9em;
+        font-size: 14px; /* Adjust button font size for smaller screens */
     }
 
     .results p {
